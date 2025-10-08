@@ -4,6 +4,7 @@ import { Product } from '../../api/product';
 import { ProductService } from '../../service/product.service';
 import { Subscription, debounceTime } from 'rxjs';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
+import { DashboardService } from '../../service/dashboard.service';
 
 @Component({
     templateUrl: './dashboard.component.html',
@@ -14,13 +15,15 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
     products!: Product[];
 
+    users!: any;
+
     chartData: any;
 
     chartOptions: any;
 
     subscription!: Subscription;
 
-    constructor(private productService: ProductService, public layoutService: LayoutService) {
+    constructor(private productService: ProductService, public layoutService: LayoutService, public dashboardService: DashboardService) {
         this.subscription = this.layoutService.configUpdate$
         .pipe(debounceTime(25))
         .subscribe((config) => {
@@ -31,7 +34,8 @@ export class DashboardComponent implements OnInit, OnDestroy {
     ngOnInit() {
         this.initChart();
         this.productService.getProductsSmall().then(data => this.products = data);
-
+        this.dashboardService.getUsers().subscribe(data => this.users = data);
+        console.log("dashboardService: ", this.dashboardService)
         this.items = [
             { label: 'Add New', icon: 'pi pi-fw pi-plus' },
             { label: 'Remove', icon: 'pi pi-fw pi-minus' }
