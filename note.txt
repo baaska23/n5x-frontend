@@ -1,0 +1,63 @@
+1. Frontend authentication layer
+Frontend collects credentials such as username and password and stores the token after backend verification
+It's responsible for showing the login form, calling /api/login api, saving received JWT in localStorage or sessionStorage
+and attaching that token as interceptor to every future request.
+
+2. Backend authentication layer
+Backend validates credentials and generates JWT tokens
+It's responsible for verifying username and password, hashing and comparing passwords, creating JWT token with user details 
+(username, role, id) and sending that JWT back to the frontend.
+
+3. Backend authorization layer (For admins)
+Once user has token, every other backend endpoint must verify and trust only valid tokens (Authorization: Bearer <JWT>)
+The backend intercepts it and verifies it's valid and not expired, extracts user's info (like roles) and allows or denies access based on permissions.
+
+Authentication -> Who are you? 
+Authorization -> What are you allowed to do ?
+
+Regular users can access profile page 
+Admins can access dashboard, subscription and payments info page
+
+JWT (xxx.yyy.zzz) consists of header (metadata like algorithm), payload (my data like sub, role, exp_time) and signature (proof that the token
+was really issued by my backend <-> public and private key concept)
+
+JWTs are signed not encrypted so the payload can be read by anyone yet only authenticated issuer (my backend) can sign it. To do that, we use a key
+pair: private key(secret) for signing the token and public key for verifying that token's signature is valid.
+
+Let's say we use RS256 and generates both keys
+
+String token = Jwt.issuer("https://myapp").upn(user.getUsername()).groups(Set.of(user.getRole())).sign();
+Later when user makes a request with that token the backend uses the public key to verify the signature and if someone tries to tamper with the token
+(changing role from user to admin) signature checks will fail and backend rejects it.
+
+
+1. User logs in
+2. Backend checks credentials and signs JWT (private key)
+3. Frontend stores JWT and sends it with future requests
+4. Backend verifies JWT on each API call (public key)
+
+Backend signing means it hashes header + payload and then encrypts the hash using the private key
+Now when my API receives this token, it splits into header, payload and signature and recomputes the hash of header.payload -> hash = SHA256()
+and uses public key to decrypt the signature and check if it matches the hash
+
+
+plain text --RSA, AES, Blowfish--> cipher text (two-way)
+plain text --hash function(SHA-256)--> cipher text (one-way)
+
+if two users has same password like baaska1234 and they'd get same hash thats not good so we add random salt
+hash = SHA256(password + salt) that's what BCrypt or Argon2 do
+
+When my backend signs a JWT it hashes header + payload and produces a digest then encrypts that hash with the private key thats signature
+when verifying backend recomputes the hash and decrypts signature with public key so it gets original hash and compares them if equal thats valid token
+
+SHA-256 (Secure Hash Algorithm 256-bit)
+It takes any input and produces 256-bit (32-byte) hash usually shown as 64-character hexadecimal String
+
+1. Convert input to binary
+2. Split into 512-bit blocks
+3. Initialize 8 working variables
+4. Compression function
+5. Update hash values
+6. Produce final hash
+
+one-way, avalanche effect (even 1 bit change in input, 50% bits flipped in hash)
