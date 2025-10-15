@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
+import { AuthService } from '../auth.service';
+import { LoginRequest } from 'src/app/models/auth.models';
 
 @Component({
     selector: 'app-login',
@@ -15,9 +17,28 @@ import { LayoutService } from 'src/app/layout/service/app.layout.service';
 })
 export class LoginComponent {
 
-    valCheck: string[] = ['remember'];
+    password: string = "";
+    username: string = "";
 
-    password!: string;
+    constructor(
+        public layoutService: LayoutService,
+        private authService: AuthService
+    ) {}
 
-    constructor(public layoutService: LayoutService) { }
+    login() {
+        const body: LoginRequest = {
+            username: this.username,
+            password: this.password
+        }
+        this.authService.login(body).subscribe({
+            next: (res) => {
+                console.log('Login successful', res);
+                // localStorage.setItem('token', res.token);
+                // console.log("My token is: ", res.token);
+            },
+            error: (err) => {
+                console.log('Login error', err);
+            }
+        })
+    }
 }
