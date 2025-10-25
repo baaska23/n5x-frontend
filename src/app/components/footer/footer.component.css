@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.items {
+    display: grid;
+    grid-row: 4;
+    grid-gap: 4;
+    text-decoration: underline;
+}
+
+.questions {
+    text-decoration: underline;
+}

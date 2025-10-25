@@ -1,0 +1,26 @@
+<div class="wrapper">
+    <h2>Frequently asked questions</h2>
+
+    <p-accordion>
+        @for (tab of tabs; track tab.title) {
+            <p-accordion-panel [value]="tab.value">
+                <p-accordion-header>{{ tab.title }}</p-accordion-header>
+                <p-accordion-content>
+                    <p class="m-0">{{ tab.content }}</p>
+                </p-accordion-content>
+            </p-accordion-panel>
+        }
+    </p-accordion>
+
+    <div class="footer">
+        <span>Ready to watch? Enter your email to create or restart your membership</span>
+        <div class="input">
+            <input type="text" pInputText [(ngModel)]="value" placeholder="Email address"/>
+            <p-button>
+                <ng-template pTemplate="icon">
+                    <img src="/src/assets/public/buttons/get-started.svg" alt="get-started-button" width="20" height="20"/>
+                </ng-template>
+            </p-button>
+        </div>
+    </div>
+</div>
