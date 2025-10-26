@@ -1,0 +1,33 @@
+<div class="carousel-wrapper">
+    <div class="carousel-container">
+        <button class="nav-btn prev-btn" (click)="scrollPrev()" *ngIf="canScrollPrev">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        
+        <div class="carousel-track" #carouselTrack>
+            <div class="movie-card" *ngFor="let movie of movies; let i = index">
+                <div class="movie-image-wrapper">
+                    <img [src]="movie.imgUrl" [alt]="movie.name" class="movie-image" />
+                    <div class="movie-overlay">
+                        <div class="overlay-content">
+                            <button class="play-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                            <h4>{{ movie.name }}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="nav-btn next-btn" (click)="scrollNext()" *ngIf="canScrollNext">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </div>
+</div>

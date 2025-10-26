@@ -11,6 +11,10 @@ import { AccordionModule } from "primeng/accordion";
 import { SigninComponent } from "./sign-in/sign-in.component";
 import { RadioButtonModule } from "primeng/radiobutton";
 import { ProfilesComponent } from "./profiles/profiles.component";
+import { HomeComponent } from "./home/home.component";
+import { HeaderComponent } from "../components/header/header.component";
+import { AppConfigModule } from "src/app/layout/config/config.module";
+import { CarouselComponent } from "src/app/components/carousel/carousel.component";
 
 @NgModule({
     imports: [
@@ -22,12 +26,16 @@ import { ProfilesComponent } from "./profiles/profiles.component";
     AccordionModule,
     FooterComponent,
     n5xRoutingModule,
-    RadioButtonModule
+    RadioButtonModule,
+    HeaderComponent,
+    AppConfigModule,
+    CarouselComponent
 ],
     declarations: [
         FirstPageComponent,
         SigninComponent,
-        ProfilesComponent
+        ProfilesComponent,
+        HomeComponent
     ]
 })
 export class n5xModule { }

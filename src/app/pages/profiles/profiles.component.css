@@ -98,3 +98,47 @@
         font-size: 1rem;
     }
 }
+
+/* ...existing code... */
+
+.manage-btn {
+    margin-top: 48px;
+    padding: 12px 36px;
+    background: transparent;
+    border: 2px solid #808080;
+    color: #808080;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 
+        background 0.3s,
+        color 0.3s,
+        border-color 0.3s,
+        transform 0.2s;
+    letter-spacing: 1px;
+}
+
+.manage-btn:hover {
+    background: #fff;
+    color: #141414;
+    border-color: #fff;
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .manage-btn {
+        margin-top: 32px;
+        padding: 10px 24px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .manage-btn {
+        margin-top: 24px;
+        padding: 8px 16px;
+        font-size: 0.95rem;
+    }
+}

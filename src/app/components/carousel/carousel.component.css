@@ -1,0 +1,187 @@
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 8px 4px;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.movie-card {
+    flex: 0 0 auto;
+    width: calc(25% - 6px);
+    min-width: 200px;
+    max-width: 300px;
+    position: relative;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.movie-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #2a2a2a;
+}
+
+.movie-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover .movie-image {
+    transform: scale(1.1);
+}
+
+.movie-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+}
+
+.movie-card:hover .movie-overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    width: 100%;
+}
+
+.play-icon {
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: all 0.2s;
+}
+
+.play-icon:hover {
+    background: #fff;
+}
+
+.play-icon:hover svg path {
+    fill: #000;
+}
+
+.overlay-content h4 {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 4px;
+    width: 48px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    transition: background 0.2s;
+}
+
+.nav-btn:hover {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+@media (max-width: 1400px) {
+    .movie-card {
+        width: calc(33.333% - 6px);
+    }
+}
+
+@media (max-width: 900px) {
+    .movie-card {
+        width: calc(50% - 4px);
+        min-width: 150px;
+    }
+
+    .nav-btn {
+        width: 40px;
+    }
+
+    .overlay-content h4 {
+        font-size: 0.9rem;
+    }
+
+    .play-icon {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 600px) {
+    .movie-card {
+        width: calc(50% - 4px);
+        min-width: 120px;
+    }
+
+    .carousel-track {
+        gap: 6px;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .overlay-content h4 {
+        font-size: 0.8rem;
+    }
+}

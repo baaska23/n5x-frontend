@@ -26,6 +26,10 @@ export class ProfilesComponent implements OnInit {
         {
             name: 'Kai',
             imgUrl: '/assets/public/profile/profile3.svg'
+        },
+        {
+            name: 'Add profiles',
+            imgUrl: '/assets/public/profile/add-profile.svg'
         }
     ]
 }
