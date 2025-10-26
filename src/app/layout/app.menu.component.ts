@@ -19,6 +19,7 @@ export class AppMenuComponent implements OnInit {
                 items: [
                     { label: 'Landing page', icon: 'pi pi-fw pi-id-card', routerLink: ['/n5x/landingPage'] },
                     { label: 'Signin page', icon: 'pi pi-fw pi-check-square', routerLink: ['/n5x/signInPage'] },
+                    { label: 'Profiles page', icon: 'pi pi-fw pi-check-square', routerLink: ['/n5x/profilesPage'] },
                 ]
             },
             {

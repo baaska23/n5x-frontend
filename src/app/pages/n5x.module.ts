@@ -10,6 +10,7 @@ import { FooterComponent } from "../components/footer/footer.component";
 import { AccordionModule } from "primeng/accordion";
 import { SigninComponent } from "./sign-in/sign-in.component";
 import { RadioButtonModule } from "primeng/radiobutton";
+import { ProfilesComponent } from "./profiles/profiles.component";
 
 @NgModule({
     imports: [
@@ -25,7 +26,8 @@ import { RadioButtonModule } from "primeng/radiobutton";
 ],
     declarations: [
         FirstPageComponent,
-        SigninComponent
+        SigninComponent,
+        ProfilesComponent
     ]
 })
 export class n5xModule { }

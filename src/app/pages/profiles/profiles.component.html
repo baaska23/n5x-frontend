@@ -1,0 +1,9 @@
+<div class="wrapper">
+    <h1>Who's watching?</h1>
+    <div class="profiles">
+        <div class="profile" *ngFor="let profile of profiles">
+            <img [src]="profile.imgUrl" alt="profile img"/>
+            <h5>{{ profile.name }}</h5>
+        </div>
+    </div>
+</div>
