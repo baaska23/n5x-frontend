@@ -6,7 +6,7 @@ import { LayoutService } from 'src/app/layout/service/app.layout.service';
     selector: 'app-landing',
     templateUrl: './landing.component.html'
 })
-export class LandingComponent {
+export class LandingPageComponent {
 
     constructor(public layoutService: LayoutService, public router: Router) { }
     

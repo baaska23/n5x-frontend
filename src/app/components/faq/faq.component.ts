@@ -39,6 +39,10 @@ export class FaqComponent {
             title: "Is Netflix good for kids?",
             content: "Aliquip cillum consectetur labore adipisicing laboris qui quis laborum est Lorem do. Tempor esse labore duis labore in. Pariatur elit veniam occaecat ut ipsum incididunt duis sunt. Aliqua duis proident incididunt voluptate. Cillum do sit amet excepteur adipisicing minim. Mollit non amet est culpa amet magna eu labore quis ipsum exercitation. Do ea pariatur duis consectetur."
         }
+    ];
 
-    ]
+    onSubmit() {
+        // Handle form submission here
+        console.log('Submitted email:', this.value);
+    }
 }

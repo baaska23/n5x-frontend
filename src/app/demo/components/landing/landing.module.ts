@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LandingRoutingModule } from './landing-routing.module';
-import { LandingComponent } from './landing.component';
+import { LandingPageComponent } from './landing.component';
 import { StyleClassModule } from 'primeng/styleclass';
 import { DividerModule } from 'primeng/divider';
 import { ChartModule } from 'primeng/chart';
@@ -18,6 +18,6 @@ import { ButtonModule } from 'primeng/button';
         PanelModule,
         ButtonModule
     ],
-    declarations: [LandingComponent]
+    declarations: [LandingPageComponent]
 })
 export class LandingModule { }

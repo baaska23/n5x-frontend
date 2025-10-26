@@ -2,10 +2,17 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { NotfoundComponent } from './demo/components/notfound/notfound.component';
 import { AppLayoutComponent } from "./layout/app.layout.component";
+import { n5xModule } from './pages/n5x.module';
 
 @NgModule({
     imports: [
         RouterModule.forRoot([
+            {
+                path: 'n5x', component: AppLayoutComponent,
+                children: [
+                    {path: '', loadChildren: () => import('./pages/n5x.module').then(m => m.n5xModule)}
+                ]
+            },
             {
                 path: '', component: AppLayoutComponent,
                 children: [

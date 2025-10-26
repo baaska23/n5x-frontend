@@ -1,0 +1,291 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #000;
+    color: #f0f0f0;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px;
+}
+
+.logo-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.logo-btn:hover {
+    opacity: 0.8;
+}
+
+.logo-btn img {
+    height: 48px;
+    width: auto;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.icon-btn {
+    background: none;
+    border: 1px solid rgba(240, 240, 240, 0.3);
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn:hover {
+    background: rgba(240, 240, 240, 0.1);
+    border-color: rgba(240, 240, 240, 0.5);
+}
+
+.sign-in-btn {
+    background: #e50914;
+    border: none;
+}
+
+.sign-in-btn:hover {
+    background: #f40612;
+}
+
+.icon-btn img {
+    height: 24px;
+    width: auto;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 24px;
+    color: #f0f0f0;
+}
+
+.unlimited-movies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/public/landing-page/hero-image.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 120px 24px 80px 24px;
+    width: 100%;
+    position: relative;
+}
+
+.unlimited-movies::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+}
+
+.unlimited-movies > * {
+    position: relative;
+    z-index: 1;
+}
+
+.unlimited-movies h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-align: center;
+    color: #f0f0f0;
+    max-width: 800px;
+}
+
+.unlimited-movies h5 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 24px;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+.unlimited-movies .footer {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f0f0f0;
+}
+
+.unlimited-movies .footer span {
+    color: #f0f0f0;
+    font-size: 1.125rem;
+    margin-bottom: 16px;
+}
+
+.unlimited-movies .input {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.unlimited-movies input[type="text"] {
+    padding: 16px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    min-width: 320px;
+    background: rgba(22, 22, 22, 0.7);
+    color: #f0f0f0;
+}
+
+.unlimited-movies input[type="text"]::placeholder {
+    color: rgba(240, 240, 240, 0.5);
+}
+
+.unlimited-movies input[type="text"]:focus {
+    outline: none;
+    border-color: #f0f0f0;
+    background: rgba(22, 22, 22, 0.9);
+}
+
+.get-started-btn {
+    background: #e50914;
+    border: none;
+    padding: 16px 24px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #f0f0f0;
+}
+
+.get-started-btn:hover {
+    background: #f40612;
+}
+
+.price-banner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 48px 0;
+}
+
+.enjoy, .watch, .kids, .download {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    margin: 48px 0;
+    color: #f0f0f0;
+    max-width: 1200px;
+    width: 100%;
+    padding: 48px 24px;
+    border-bottom: 8px solid #222;
+}
+
+.enjoy .text, .watch .text, .kids .text, .download .text {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    color: #f0f0f0;
+}
+
+.enjoy .text h1, .watch .text h1, .kids .text h1, .download .text h1 {
+    color: #f0f0f0;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.enjoy .text h5, .watch .text h5, .kids .text h5, .download .text h5 {
+    color: #f0f0f0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.enjoy img, .watch img, .kids img, .download img {
+    width: 480px;
+    height: auto;
+}
+
+@media (max-width: 900px) {
+    .header {
+        padding: 16px 24px;
+    }
+    
+    .body {
+        padding: 0 16px;
+    }
+    
+    .unlimited-movies {
+        padding: 80px 16px 60px 16px;
+    }
+    
+    .unlimited-movies h1 {
+        font-size: 2rem;
+    }
+    
+    .unlimited-movies h5 {
+        font-size: 1.125rem;
+    }
+    
+    .unlimited-movies .footer span {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .unlimited-movies .input {
+        flex-direction: column;
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .unlimited-movies input[type="text"] {
+        min-width: 100%;
+    }
+    
+    .get-started-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .enjoy, .watch, .kids, .download {
+        flex-direction: column;
+        gap: 24px;
+        margin: 24px 0;
+        padding: 32px 16px;
+    }
+    
+    .enjoy .text h1, .watch .text h1, .kids .text h1, .download .text h1 {
+        font-size: 2rem;
+    }
+    
+    .enjoy .text h5, .watch .text h5, .kids .text h5, .download .text h5 {
+        font-size: 1.125rem;
+    }
+    
+    .enjoy img, .watch img, .kids img, .download img {
+        width: 100%;
+        max-width: 400px;
+    }
+}

@@ -1,0 +1,62 @@
+<div class="wrapper">
+    <div class="header">
+        <button class="logo-btn">
+            <img src="/assets/public/buttons/logo.svg" alt="logo"/>
+        </button>
+        <div class="buttons">
+            <button class="icon-btn">
+                <img src="/assets/public/buttons/language-selection.svg" alt="language-selection"/>
+            </button>
+            <button class="icon-btn sign-in-btn">
+                <img src="/assets/public/buttons/sign-in.svg" alt="sign-in"/>
+            </button>
+        </div>
+    </div>
+
+    <div class="body">
+        <div class="unlimited-movies">
+            <h1>Unlimited movies, TV shows, and more</h1>
+            <h5>Watch anywhere. Cancel anytime.</h5>
+            <div class="footer">
+                <span>Ready to watch? Enter your email to create or restart your membership</span>
+                <div class="input">
+                    <input type="text" [(ngModel)]="value" placeholder="Email address"/>
+                    <button class="get-started-btn">
+                        <img src="/assets/public/buttons/get-started.svg" alt="get-started-button" width="20" height="20"/>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <img src="/assets/public/landing-page/price-banner.svg" alt="price-banner" class="price-banner"/>
+        <div class="enjoy">
+            <div class="text">
+                <h1>Enjoy on your TV</h1>
+                <h5>Watch on smart TVs, Playstation, Xbox and Apple TV</h5>
+            </div>
+            <img src="/assets/public/landing-page/enjoy.svg" alt="enjoy"/>
+        </div>
+        <div class="watch">
+            <img src="/assets/public/landing-page/watch.svg" alt="watch"/>
+            <div class="text">
+                <h1>Watch everywhere</h1>
+                <h5>Stream unlimited movies and TV shows on phone, tablet, laptop and TV.</h5>
+            </div>
+        </div>
+        <div class="kids">
+            <div class="text">
+                <h1>Create profiles for kids</h1>
+                <h5>Send kids on adventures with their favorite characters in space made just for them—free with your membership.</h5>
+            </div>
+            <img src="/assets/public/landing-page/kids.svg" alt="kids"/>
+        </div>
+        <div class="download">
+            <img src="/assets/public/landing-page/download.svg" alt="download"/>
+            <div class="text">
+                <h1>Download your shows to watch offline</h1>
+                <h5>Watch on a plane, train, or submarine...</h5>
+            </div>
+        </div>
+        <app-faq></app-faq>
+        <app-footer></app-footer>
+    </div>
+</div>

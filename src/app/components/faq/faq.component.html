@@ -3,24 +3,21 @@
 
     <p-accordion>
         @for (tab of tabs; track tab.title) {
-            <p-accordion-panel [value]="tab.value">
-                <p-accordion-header>{{ tab.title }}</p-accordion-header>
-                <p-accordion-content>
-                    <p class="m-0">{{ tab.content }}</p>
-                </p-accordion-content>
-            </p-accordion-panel>
+            <p-accordionTab [header]="tab.title">
+                <p class="m-0">{{ tab.content }}</p>
+            </p-accordionTab>
         }
     </p-accordion>
 
     <div class="footer">
         <span>Ready to watch? Enter your email to create or restart your membership</span>
-        <div class="input">
-            <input type="text" pInputText [(ngModel)]="value" placeholder="Email address"/>
-            <p-button>
-                <ng-template pTemplate="icon">
-                    <img src="/src/assets/public/buttons/get-started.svg" alt="get-started-button" width="20" height="20"/>
-                </ng-template>
-            </p-button>
-        </div>
+        <form class="input" (ngSubmit)="onSubmit()">
+            <label for="faq-email" class="visually-hidden">Email address</label>
+            <input id="faq-email" type="email" [(ngModel)]="value" name="email" placeholder="Email address"/>
+            <button type="submit" class="get-started-btn" aria-label="Get started">
+                <img src="/assets/public/buttons/get-started.svg" alt="" width="20" height="20"/>
+                <span>Get Started</span>
+            </button>
+        </form>
     </div>
 </div>
