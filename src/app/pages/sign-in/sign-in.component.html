@@ -1,0 +1,36 @@
+<div class="wrapper">
+    <div class="header">
+        <button class="logo-btn">
+            <img src="/assets/public/buttons/logo.svg" alt="logo"/>
+        </button>
+    </div>
+    <div class="content">
+        <div class="sign-in-box">
+            <h1>Sign In</h1>
+            <form class="sign-in-form">
+                <input type="email" [(ngModel)]="email" name="email" placeholder="Email or phone number"/>
+                <input type="password" [(ngModel)]="password" name="password" placeholder="Password"/>
+                <button type="submit" class="sign-in-btn">
+                    Sign In
+                </button>
+                <span class="or-divider">OR</span>
+                <button type="button" class="sign-in-code-btn">
+                    Use a Sign-In Code
+                </button>
+                <a href="http://youtube.com" class="forgot-password">Forgot password?</a>
+                <div class="remember-me">
+                    <input type="checkbox" id="remember" [(ngModel)]="rememberMe" name="remember"/>
+                    <label for="remember">Remember me</label>
+                </div>
+                <p class="signup-link">
+                    New to Netflix? <a href="http://youtube.com"><strong>Sign up now.</strong></a>
+                </p>
+                <p class="recaptcha-text">
+                    This page is protected by Google reCAPTCHA to ensure you're not a bot. 
+                    <a href="http://youtube.com">Learn more.</a>
+                </p>
+            </form>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

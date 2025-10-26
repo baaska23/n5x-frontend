@@ -8,20 +8,24 @@ import { FormsModule } from "@angular/forms";
 import { FaqComponent } from "../components/faq/faq.component";
 import { FooterComponent } from "../components/footer/footer.component";
 import { AccordionModule } from "primeng/accordion";
+import { SigninComponent } from "./sign-in/sign-in.component";
+import { RadioButtonModule } from "primeng/radiobutton";
 
 @NgModule({
     imports: [
-        CommonModule,
-        ButtonModule,
-        InputTextModule,
-        FormsModule,
-        FaqComponent,
-        AccordionModule,
-        FooterComponent,
-        n5xRoutingModule
-    ],
+    CommonModule,
+    ButtonModule,
+    InputTextModule,
+    FormsModule,
+    FaqComponent,
+    AccordionModule,
+    FooterComponent,
+    n5xRoutingModule,
+    RadioButtonModule
+],
     declarations: [
-        FirstPageComponent,     
+        FirstPageComponent,
+        SigninComponent
     ]
 })
 export class n5xModule { }
