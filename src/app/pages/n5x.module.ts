@@ -15,6 +15,10 @@ import { HomeComponent } from "./home/home.component";
 import { HeaderComponent } from "../components/header/header.component";
 import { AppConfigModule } from "src/app/layout/config/config.module";
 import { CarouselComponent } from "src/app/components/carousel/carousel.component";
+import { EpisodeCardComponent } from "../components/episode-card/episode-card.component";
+import { ShowDetailComponent } from "./content-detail/show-detail.component";
+import { MlkCardComponent } from "../components/more-like-this-card/mlk-card.component";
+import { MovieDetailComponent } from "./content-detail/movie-detail.component";
 
 @NgModule({
     imports: [
@@ -29,13 +33,17 @@ import { CarouselComponent } from "src/app/components/carousel/carousel.componen
     RadioButtonModule,
     HeaderComponent,
     AppConfigModule,
-    CarouselComponent
+    CarouselComponent,
+    EpisodeCardComponent,
+    MlkCardComponent
 ],
     declarations: [
         FirstPageComponent,
         SigninComponent,
         ProfilesComponent,
-        HomeComponent
+        HomeComponent,
+        ShowDetailComponent,
+        MovieDetailComponent
     ]
 })
 export class n5xModule { }

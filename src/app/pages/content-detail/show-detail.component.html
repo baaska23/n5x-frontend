@@ -1,0 +1,54 @@
+<div class="wrapper">
+    <div class="header">
+        <img src="/assets/public/dialog/banner.svg" alt="banner" />
+        <h1>House of Ninja</h1>
+        <div class="buttons">
+            <button class="info-btn">
+                <img src="/assets/public/buttons/play.svg" alt="more info"/>
+            </button>
+            <button class="info-btn">
+                <img src="/assets/public/buttons/add-my-list.svg" alt="more info"/>
+            </button>
+            <button class="info-btn">
+                <img src="/assets/public/buttons/like.svg" alt="more info"/>
+            </button>
+        </div>
+        <div class="movie-info">
+            <div class="left">
+                <p><span style="background-color: green;">New</span> 3 seasons 2024</p>
+                <h3>#2 in TV Shows Today</h3>
+                <p>Sunt irure excepteur exercitation nostrud non reprehenderit id veniam tempor. Ad et irure et ea labore nisi amet et ullamco proident. Ad nisi aliqua aliqua pariatur cupidatat amet excepteur irure dolore elit esse ad. Sit pariatur nulla reprehenderit sit amet et sunt sit ea. Cupidatat ut excepteur minim sunt mollit enim.</p>
+            </div>
+            <div class="right">
+                <p>Cast: Kento Kaku, Tae Kimura</p>
+                <p>Genres: TV Dramas, Japanese, TV Thrillers</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="episodes-section">
+        <h2>Episodes</h2>
+        <div class="episodes">
+            <app-episode-card 
+                *ngFor="let episode of episodes"
+                [index]="episode.index" 
+                [bannerUrl]="episode.bannerUrl" 
+                [name]="episode.name" 
+                [description]="episode.description" 
+                [duration]="episode.duration">
+            </app-episode-card>
+        </div>
+    </div>
+
+    <div class="more-like-section">
+        <h2>More like this</h2>
+        <div class="more-like-this-grid">
+            <app-mlk-card 
+                *ngFor="let mlk of mlks"
+                [bannerUrl]="mlk.bannerUrl" 
+                [releasedYear]="mlk.releasedYear" 
+                [description]="mlk.description">
+            </app-mlk-card>
+        </div>
+    </div>
+</div>

@@ -12,6 +12,10 @@ export class HomeComponent implements OnInit {
     continueWatching: any[];
     recentlyAdded: any[];
 
+    // constructor(
+    //     private dialogRef: DynamicDialogRef
+    // )
+
     ngOnInit(): void {
         this.movies = [
             {
@@ -53,4 +57,13 @@ export class HomeComponent implements OnInit {
         this.continueWatching = [...this.movies];
         this.recentlyAdded = [...this.movies];
     }
+
+    // onNew() {
+    //     this._dialogRef = this._dialogService.open(TransactionFormComponent, {
+    //         header: 'Гүйлгээ илгээх',
+    //         width: '75vw',
+    //         height: '75vw',
+    //     });
+    //     this._dialogRef.onClose.subscribe((v: string) => {});
+    // }
 }
