@@ -1,10 +1,32 @@
-<div class="video-container">
-    <video
-        #videoElement
-        width="100%"
-        height="100%"
-        controls
-        autoplay
-        style="background-color: black; border-radius: 12px"
-    ></video>
+<div class="video-container" style="position: relative;">
+  <video
+    #videoElement
+    width="100%"
+    height="100%"
+    autoplay
+    (timeupdate)="onTimeUpdate()"
+    (loadedmetadata)="onLoadedMetadata()"
+    (click)="togglePlay()"
+    style="background-color: black; border-radius: 12px"
+  ></video>
+  <button
+    class="center-play-btn"
+    *ngIf="videoElement?.nativeElement?.paused"
+    (click)="togglePlay(); $event.stopPropagation();"
+    aria-label="Play"
+  >
+    ▶
+  </button>
+  <div class="controls">
+    <span>{{ currentTime | date:'mm:ss' }}</span>
+    <input
+      type="range"
+      min="0"
+      [max]="duration"
+      [value]="currentTime"
+      (input)="seek($event)"
+      class="progress-bar"
+    />
+    <span>{{ duration | date:'mm:ss' }}</span>
+  </div>
 </div>

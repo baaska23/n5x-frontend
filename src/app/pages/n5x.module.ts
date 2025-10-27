@@ -19,6 +19,8 @@ import { EpisodeCardComponent } from "../components/episode-card/episode-card.co
 import { ShowDetailComponent } from "./content-detail/show-detail.component";
 import { MlkCardComponent } from "../components/more-like-this-card/mlk-card.component";
 import { MovieDetailComponent } from "./content-detail/movie-detail.component";
+import { ActivePlayerComponent } from "./active-player/active-player.component";
+import { VideoPlayerComponent } from "../components/video-player/video-player.component";
 
 @NgModule({
     imports: [
@@ -35,7 +37,8 @@ import { MovieDetailComponent } from "./content-detail/movie-detail.component";
     AppConfigModule,
     CarouselComponent,
     EpisodeCardComponent,
-    MlkCardComponent
+    MlkCardComponent,
+    VideoPlayerComponent
 ],
     declarations: [
         FirstPageComponent,
@@ -43,7 +46,8 @@ import { MovieDetailComponent } from "./content-detail/movie-detail.component";
         ProfilesComponent,
         HomeComponent,
         ShowDetailComponent,
-        MovieDetailComponent
+        MovieDetailComponent,
+        ActivePlayerComponent
     ]
 })
 export class n5xModule { }

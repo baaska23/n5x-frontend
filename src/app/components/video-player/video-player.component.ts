@@ -1,10 +1,13 @@
+import { DatePipe } from "@angular/common";
 import { Component, ElementRef, Input, OnDestroy, OnInit, ViewChild } from "@angular/core";
 declare const shaka: any;
 
 @Component({
     selector: 'app-video-player',
     templateUrl: './video-player.component.html',
-    styleUrls: ['./video-player.component.css']
+    styleUrls: ['./video-player.component.css'],
+    standalone: true,
+    imports: [DatePipe]
 })
 export class VideoPlayerComponent implements OnInit, OnDestroy {
     @Input() videoUrl: string;
@@ -12,6 +15,8 @@ export class VideoPlayerComponent implements OnInit, OnDestroy {
     @Input() movieId: string;
 
     @ViewChild('videoElement', {static: true}) videoElement: ElementRef<HTMLVideoElement>;
+    currentTime = 0;
+    duration = 0;
 
     private player: any;
     private timeUpdateInterVal?: any;
@@ -25,7 +30,7 @@ export class VideoPlayerComponent implements OnInit, OnDestroy {
         if (this.timeUpdateInterVal) clearInterval(this.timeUpdateInterVal);
     }
 
-    private async initPlayer() {
+    async initPlayer() {
         const video = this.videoElement.nativeElement;
         this.player = new shaka.Player(video);
 
@@ -43,7 +48,7 @@ export class VideoPlayerComponent implements OnInit, OnDestroy {
         }, 10000);
     }
 
-    private updateProgress(seconds: number, duration: number) {
+    updateProgress(seconds: number, duration: number) {
         fetch('http://localhost:8080/watch-history', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
@@ -54,5 +59,22 @@ export class VideoPlayerComponent implements OnInit, OnDestroy {
                 isCompleted: seconds >= duration - 100
             })
         });
+    }
+
+    onLoadedMetadata() {
+        this.duration = this.videoElement.nativeElement.duration;
+    }
+
+    onTimeUpdate() {
+        this.currentTime = this.videoElement.nativeElement.currentTime;
+    }
+
+    seek(event: any) {
+        this.videoElement.nativeElement.currentTime = event.target.value;
+    }
+
+    togglePlay() {
+        const video = this.videoElement.nativeElement;
+        video.paused ? video.play() : video.pause();
     }
 }

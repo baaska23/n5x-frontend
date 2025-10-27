@@ -6,6 +6,7 @@ import { ProfilesComponent } from "./profiles/profiles.component";
 import { HomeComponent } from "./home/home.component";
 import { ShowDetailComponent } from "./content-detail/show-detail.component";
 import { MovieDetailComponent } from "./content-detail/movie-detail.component";
+import { ActivePlayerComponent } from "./active-player/active-player.component";
 
 @NgModule({
     imports: [RouterModule.forChild([
@@ -14,7 +15,8 @@ import { MovieDetailComponent } from "./content-detail/movie-detail.component";
         {path: 'profilesPage', component: ProfilesComponent},
         {path: 'homePage', component: HomeComponent},
         {path: 'showDetailDialog', component: ShowDetailComponent},
-        {path: 'movieDetailDialog', component: MovieDetailComponent}
+        {path: 'movieDetailDialog', component: MovieDetailComponent},
+        {path: 'activePlayer', component: ActivePlayerComponent}
     ])],
     exports: [RouterModule]
 })
