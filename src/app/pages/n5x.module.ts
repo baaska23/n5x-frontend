@@ -23,6 +23,9 @@ import { ActivePlayerComponent } from "./active-player/active-player.component";
 import { VideoPlayerComponent } from "../components/video-player/video-player.component";
 import { TvShowsComponent } from "./tv-shows/tv-shows.component";
 import { MoviesComponent } from "./movies/movies.component";
+import { BrowseComponent } from "./browse-by-language/browse.component";
+import { DropdownModule } from "primeng/dropdown";
+import { GridComponent } from "src/app/components/grid/grid.component";
 
 @NgModule({
     imports: [
@@ -40,7 +43,10 @@ import { MoviesComponent } from "./movies/movies.component";
     CarouselComponent,
     EpisodeCardComponent,
     MlkCardComponent,
-    VideoPlayerComponent
+    VideoPlayerComponent,
+    DropdownModule,
+    FormsModule,
+    GridComponent,
 ],
     declarations: [
         FirstPageComponent,
@@ -51,7 +57,8 @@ import { MoviesComponent } from "./movies/movies.component";
         MovieDetailComponent,
         ActivePlayerComponent,
         TvShowsComponent,
-        MoviesComponent
+        MoviesComponent,
+        BrowseComponent
     ]
 })
 export class n5xModule { }

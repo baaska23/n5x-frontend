@@ -9,6 +9,7 @@ import { MovieDetailComponent } from "./content-detail/movie-detail.component";
 import { ActivePlayerComponent } from "./active-player/active-player.component";
 import { TvShowsComponent } from "./tv-shows/tv-shows.component";
 import { MoviesComponent } from "./movies/movies.component";
+import { BrowseComponent } from "./browse-by-language/browse.component";
 
 @NgModule({
     imports: [RouterModule.forChild([
@@ -20,7 +21,8 @@ import { MoviesComponent } from "./movies/movies.component";
         {path: 'movieDetailDialog', component: MovieDetailComponent},
         {path: 'activePlayer', component: ActivePlayerComponent},
         {path: 'tvShows', component: TvShowsComponent},
-        {path: 'movies', component: MoviesComponent}
+        {path: 'movies', component: MoviesComponent},
+        {path: 'browse', component: BrowseComponent}
     ])],
     exports: [RouterModule]
 })

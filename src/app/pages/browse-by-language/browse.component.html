@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <app-header></app-header>
+  <div class="browse-by-languages">
+    <h1>Browse by Languages</h1>
+    <div class="filter-bar">
+      <span class="filter-label">Select Your Preferences</span>
+      <p-dropdown [options]="originals" [(ngModel)]="selectedOriginals" optionLabel="name" placeholder="Original Language"></p-dropdown>
+      <p-dropdown [options]="languages" [(ngModel)]="selectedLanguage" optionLabel="name" placeholder="English"></p-dropdown>
+      <span class="filter-label">Sort by</span>
+      <p-dropdown [options]="options" [(ngModel)]="selectedOption" optionLabel="name" placeholder="Suggestions For You"></p-dropdown>
+    </div>
+  </div>
+  <app-grid [contents]="contents"></app-grid>
+  <app-footer></app-footer>
+</div>
