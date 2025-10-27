@@ -5,13 +5,14 @@
         <div class="content-wrapper">
             <div class="context">
                 <img src="/assets/public/buttons/logo.svg" alt="Netflix Series" class="series-logo"/>
-                <h1>House of Ninja</h1>
+                <h1>Shawshank Redemption</h1>
                 <div class="info-tags">
-                    <span class="tag">2024</span>
-                    <span class="tag">1 Season</span>
+                    <span class="tag">1994</span>
                     <span class="tag">Action</span>
                 </div>
-                <p class="description">A family of former elite assassadors must reawaken their deadly skills when their dark past catches up with them. Blood ties will be tested as they fight to protect everything they've built.</p>
+                <p class="description">
+                    Framed for a crime he didn’t commit, banker Andy Dufresne is sentenced to life in Shawshank prison. Over decades, he forms an unlikely friendship and finds hope and redemption in the most unlikely place.
+                </p>
                 <div class="buttons">
                     <button class="play-btn">
                         <img src="/assets/public/buttons/play.svg" alt="play"/>
@@ -29,11 +30,11 @@
     <div class="carousels">
         <div class="carousel-section">
             <h2>Trending Now</h2>
-            <app-carousel [movies]="trendingContents" [title]="'Trending Now'"></app-carousel>
+            <app-carousel [movies]="trendingMovies" [title]="'Trending Now'"></app-carousel>
         </div>
         <div class="carousel-section">
             <h2>Popular on Netflix</h2>
-            <app-carousel [movies]="popularContents" [title]="'Popular on Netflix'"></app-carousel>
+            <app-carousel [movies]="popularMovies" [title]="'Popular on Netflix'"></app-carousel>
         </div>
         <div class="carousel-section">
             <h2>Continue Watching for James</h2>

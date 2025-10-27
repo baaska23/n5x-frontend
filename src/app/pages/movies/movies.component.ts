@@ -1,14 +1,14 @@
 import { Component, OnInit } from "@angular/core";
 
 @Component({
-    selector: 'app-tv-shows',
-    templateUrl: './tv-shows.component.html',
-    styleUrls: ['./tv-shows.component.css'],
+    selector: 'app-movies',
+    templateUrl: './movies.component.html',
+    styleUrls: ['./movies.component.css'],
 })
-export class TvShowsComponent implements OnInit {
-    tvShows: any[];
-    trendingTvShows: any[];
-    popularTvShows: any[];
+export class MoviesComponent implements OnInit {
+    movies: any[];
+    trendingMovies: any[];
+    popularMovies: any[];
     continueWatching: any[];
     recentlyAdded: any[];
 
@@ -17,9 +17,9 @@ export class TvShowsComponent implements OnInit {
     // )
 
     ngOnInit(): void {
-        this.tvShows = [
+        this.movies = [
             {
-                name: 'Riverdale',
+                name: 'Blue Eye Samurai',
                 imgUrl: '/assets/public/movie/blue-eye-samurai.svg'
             },
             {
@@ -43,19 +43,19 @@ export class TvShowsComponent implements OnInit {
                 imgUrl: '/assets/public/movie/naruto.svg'
             },
             {
-                name: 'Elite',
+                name: 'Oldboy',
                 imgUrl: '/assets/public/movie/oldboy.svg'
             },
             {
-                name: '13 Reasons Why',
+                name: 'Spider-Man: Homecoming',
                 imgUrl: '/assets/public/movie/spider-man.svg'
             },
         ];
 
-        this.trendingTvShows = [...this.tvShows];
-        this.popularTvShows = [...this.tvShows];
-        this.continueWatching = [...this.tvShows];
-        this.recentlyAdded = [...this.tvShows];
+        this.trendingMovies = [...this.movies];
+        this.popularMovies = [...this.movies];
+        this.continueWatching = [...this.movies];
+        this.recentlyAdded = [...this.movies];
     }
 
     // onNew() {

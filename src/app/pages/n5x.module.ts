@@ -21,6 +21,8 @@ import { MlkCardComponent } from "../components/more-like-this-card/mlk-card.com
 import { MovieDetailComponent } from "./content-detail/movie-detail.component";
 import { ActivePlayerComponent } from "./active-player/active-player.component";
 import { VideoPlayerComponent } from "../components/video-player/video-player.component";
+import { TvShowsComponent } from "./tv-shows/tv-shows.component";
+import { MoviesComponent } from "./movies/movies.component";
 
 @NgModule({
     imports: [
@@ -47,7 +49,9 @@ import { VideoPlayerComponent } from "../components/video-player/video-player.co
         HomeComponent,
         ShowDetailComponent,
         MovieDetailComponent,
-        ActivePlayerComponent
+        ActivePlayerComponent,
+        TvShowsComponent,
+        MoviesComponent
     ]
 })
 export class n5xModule { }

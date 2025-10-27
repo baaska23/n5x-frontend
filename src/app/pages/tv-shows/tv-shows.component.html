@@ -1,0 +1,51 @@
+<div class="wrapper">
+    <app-header></app-header>
+    <div class="main-content">
+        <div class="hero-gradient"></div>
+        <div class="content-wrapper">
+            <div class="context">
+                <img src="/assets/public/buttons/logo.svg" alt="Netflix Series" class="series-logo"/>
+                <h1>Riverdale</h1>
+                <div class="info-tags">
+                    <span class="tag">2024</span>
+                    <span class="tag">1 Season</span>
+                    <span class="tag">Action</span>
+                </div>
+                <p class="description">
+                    A bold, subversive take on Archie and his friends, exploring the darkness and mysteries bubbling beneath Riverdale’s wholesome facade. Secrets, romance, and danger await in this thrilling teen drama.
+                </p>
+                <div class="buttons">
+                    <button class="play-btn">
+                        <img src="/assets/public/buttons/play.svg" alt="play"/>
+                        <span>Play</span>
+                    </button>
+                    <button class="info-btn">
+                        <img src="/assets/public/buttons/more-info.svg" alt="more info"/>
+                        <span>More Info</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="carousels">
+        <div class="carousel-section">
+            <h2>Trending Now</h2>
+            <app-carousel [movies]="trendingTvShows" [title]="'Trending Now'"></app-carousel>
+        </div>
+        <div class="carousel-section">
+            <h2>Popular on Netflix</h2>
+            <app-carousel [movies]="popularTvShows" [title]="'Popular on Netflix'"></app-carousel>
+        </div>
+        <div class="carousel-section">
+            <h2>Continue Watching for James</h2>
+            <app-carousel [movies]="continueWatching" [title]="'Continue Watching'"></app-carousel>
+        </div>
+        <div class="carousel-section">
+            <h2>Recently Added</h2>
+            <app-carousel [movies]="recentlyAdded" [title]="'Recently Added'"></app-carousel>
+        </div>
+    </div>
+    
+    <app-footer></app-footer>
+</div>

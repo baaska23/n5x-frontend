@@ -6,9 +6,9 @@ import { Component, OnInit } from "@angular/core";
     styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-    movies: any[];
-    trendingMovies: any[];
-    popularMovies: any[];
+    contents: any[];
+    trendingContents: any[];
+    popularContents: any[];
     continueWatching: any[];
     recentlyAdded: any[];
 
@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
     // )
 
     ngOnInit(): void {
-        this.movies = [
+        this.contents = [
             {
                 name: 'Blue Eye Samurai',
                 imgUrl: '/assets/public/movie/blue-eye-samurai.svg'
@@ -52,10 +52,10 @@ export class HomeComponent implements OnInit {
             },
         ];
 
-        this.trendingMovies = [...this.movies];
-        this.popularMovies = [...this.movies];
-        this.continueWatching = [...this.movies];
-        this.recentlyAdded = [...this.movies];
+        this.trendingContents = [...this.contents];
+        this.popularContents = [...this.contents];
+        this.continueWatching = [...this.contents];
+        this.recentlyAdded = [...this.contents];
     }
 
     // onNew() {

@@ -24,6 +24,8 @@ export class AppMenuComponent implements OnInit {
                     { label: 'Show detail dialog', icon: 'pi pi-fw pi-check-square', routerLink: ['/n5x/showDetailDialog'] },
                     { label: 'Movie detail dialog', icon: 'pi pi-fw pi-check-square', routerLink: ['/n5x/movieDetailDialog'] },
                     { label: 'Active player', icon: 'pi pi-fw pi-check-square', routerLink: ['/n5x/activePlayer'] },
+                    { label: 'TV Shows', icon: 'pi pi-fw pi-check-square', routerLink: ['/n5x/tvShows'] },
+                    { label: 'Movies', icon: 'pi pi-fw pi-check-square', routerLink: ['/n5x/movies'] },
                 ]
             },
             {
