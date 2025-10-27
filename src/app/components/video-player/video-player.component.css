@@ -41,6 +41,31 @@
   z-index: 2;
   transition: background 0.2s;
 }
+
 .center-play-btn:hover {
   background: rgba(229,9,20,0.85);
+}
+
+.movie-info {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  z-index: 2;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.movie-title {
+  font-weight: 500;
 }

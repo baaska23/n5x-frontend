@@ -13,6 +13,7 @@ export class VideoPlayerComponent implements OnInit, OnDestroy {
     @Input() videoUrl: string;
     @Input() profileId: string;
     @Input() movieId: string;
+    @Input() movieName: string;
 
     @ViewChild('videoElement', {static: true}) videoElement: ElementRef<HTMLVideoElement>;
     currentTime = 0;
@@ -76,5 +77,9 @@ export class VideoPlayerComponent implements OnInit, OnDestroy {
     togglePlay() {
         const video = this.videoElement.nativeElement;
         video.paused ? video.play() : video.pause();
+    }
+
+    onBack() {
+        window.history.back()
     }
 }

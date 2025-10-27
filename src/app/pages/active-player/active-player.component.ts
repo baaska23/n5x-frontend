@@ -9,6 +9,7 @@ export class ActivePlayerComponent implements OnInit {
     @Input() videoUrl: string;
     @Input() profileId: string;
     @Input() movieId: string;
+    @Input() movieName: string;
     
     ngOnInit(): void {
         console.log('Hello')

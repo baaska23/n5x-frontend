@@ -17,6 +17,12 @@
   >
     ▶
   </button>
+  <div class="movie-info">
+    <button class="back-btn" (click)="onBack()">
+      &#8592;
+    </button>
+    <span class="movie-title">{{ movieName }}</span>
+  </div>
   <div class="controls">
     <span>{{ currentTime | date:'mm:ss' }}</span>
     <input
