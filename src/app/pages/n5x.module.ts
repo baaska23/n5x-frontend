@@ -26,6 +26,7 @@ import { MoviesComponent } from "./movies/movies.component";
 import { BrowseComponent } from "./browse-by-language/browse.component";
 import { DropdownModule } from "primeng/dropdown";
 import { GridComponent } from "src/app/components/grid/grid.component";
+import { MyListComponent } from "./my-list/my-list.component";
 
 @NgModule({
     imports: [
@@ -58,7 +59,8 @@ import { GridComponent } from "src/app/components/grid/grid.component";
         ActivePlayerComponent,
         TvShowsComponent,
         MoviesComponent,
-        BrowseComponent
+        BrowseComponent,
+        MyListComponent
     ]
 })
 export class n5xModule { }

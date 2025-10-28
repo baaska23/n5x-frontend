@@ -10,6 +10,7 @@ import { ActivePlayerComponent } from "./active-player/active-player.component";
 import { TvShowsComponent } from "./tv-shows/tv-shows.component";
 import { MoviesComponent } from "./movies/movies.component";
 import { BrowseComponent } from "./browse-by-language/browse.component";
+import { MyListComponent } from "./my-list/my-list.component";
 
 @NgModule({
     imports: [RouterModule.forChild([
@@ -22,7 +23,8 @@ import { BrowseComponent } from "./browse-by-language/browse.component";
         {path: 'activePlayer', component: ActivePlayerComponent},
         {path: 'tvShows', component: TvShowsComponent},
         {path: 'movies', component: MoviesComponent},
-        {path: 'browse', component: BrowseComponent}
+        {path: 'browse', component: BrowseComponent},
+        {path: 'myList', component: MyListComponent}
     ])],
     exports: [RouterModule]
 })

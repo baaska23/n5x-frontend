@@ -27,6 +27,7 @@ export class AppMenuComponent implements OnInit {
                     { label: 'TV Shows', icon: 'pi pi-fw pi-check-square', routerLink: ['/n5x/tvShows'] },
                     { label: 'Movies', icon: 'pi pi-fw pi-check-square', routerLink: ['/n5x/movies'] },
                     { label: 'Browse by language', icon: 'pi pi-fw pi-check-square', routerLink: ['/n5x/browse'] },
+                    { label: 'My list', icon: 'pi pi-fw pi-check-square', routerLink: ['/n5x/myList'] },
                 ]
             },
             {
