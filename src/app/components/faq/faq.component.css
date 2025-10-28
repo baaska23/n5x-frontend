@@ -121,17 +121,14 @@
 .get-started-btn {
     background: #e50914;
     border: none;
-    padding: 16px 24px;
     cursor: pointer;
     border-radius: 4px;
     transition: background 0.2s;
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 1.125rem;
     font-weight: 600;
     color: #f0f0f0;
-    white-space: nowrap;
 }
 
 .get-started-btn:hover {
